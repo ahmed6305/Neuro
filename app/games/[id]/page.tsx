@@ -5,6 +5,12 @@ import GameRenderer from '../../../components/GameRenderer'
 import { GameShell } from '../../../components/ui/GameShell'
 import { NeonButton } from '../../../components/ui/NeonButton'
 
+export async function generateStaticParams() {
+  return games.map((game) => ({
+    id: game.id,
+  }))
+}
+
 export default async function GamePage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params
   const game = games.find(g => g.id === id)
