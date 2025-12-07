@@ -134,7 +134,7 @@ export default function SoundMemoryBeat() {
     };
 
     playSequence();
-  }, [sequence, gameStarted, gameOver, isPlayingSequence]);
+  }, [sequence, gameStarted, gameOver]); // Removed isPlayingSequence from deps
 
   // Check player sequence
   useEffect(() => {

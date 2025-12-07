@@ -17,7 +17,7 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${inter.variable} ${outfit.variable} font-sans antialiased text-slate-200 bg-transparent flex flex-col min-h-screen`}>
+      <body suppressHydrationWarning className={`${inter.variable} ${outfit.variable} font-sans antialiased text-slate-200 bg-transparent flex flex-col min-h-screen`}>
         <Navbar />
         <main className="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 relative z-10">
           {children}
