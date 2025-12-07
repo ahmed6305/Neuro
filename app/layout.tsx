@@ -3,6 +3,7 @@ import Footer from '../components/Footer'
 import React from 'react'
 import { Inter, Outfit } from 'next/font/google'
 import '../styles/globals.css'
+import { Toaster } from '../components/ui/Toaster'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 const outfit = Outfit({ subsets: ['latin'], variable: '--font-outfit' })
@@ -15,13 +16,15 @@ export const metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
-      <body className={`${inter.variable} ${outfit.variable} font-sans antialiased text-slate-200 bg-slate-900`}>
+    <html lang="en" className="scroll-smooth">
+      <body className={`${inter.variable} ${outfit.variable} font-sans antialiased text-slate-200 bg-transparent flex flex-col min-h-screen`}>
         <Navbar />
-        <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 min-h-screen">
+        <main className="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 relative z-10">
           {children}
         </main>
         <Footer />
+        <Toaster />
+        <div id="toast-container" className="fixed bottom-4 right-4 z-50"></div>
       </body>
     </html>
   )

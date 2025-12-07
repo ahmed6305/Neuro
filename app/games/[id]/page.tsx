@@ -46,15 +46,20 @@ export default async function GamePage({ params }: { params: Promise<{ id: strin
       showBackButton={true}
     >
       {/* Tags and Metadata */}
-      <div className="flex gap-3 flex-wrap mb-8">
-        <span className={`px-3 py-1 rounded-lg text-sm font-bold border ${getDifficultyColor(game.difficulty)}`}>
-          {game.difficulty}
-        </span>
-        {game.tags.map(tag => (
-          <span key={tag} className="px-3 py-1 rounded-lg text-sm bg-indigo-500/10 text-indigo-300 border border-indigo-500/20">
-            #{tag}
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8 pb-6 border-b border-white/5">
+        <div className="flex flex-wrap gap-2">
+          <span className={`px-3 py-1.5 rounded-full text-xs font-bold border tracking-wider uppercase ${getDifficultyColor(game.difficulty)}`}>
+            {game.difficulty}
           </span>
-        ))}
+          {game.tags.map(tag => (
+            <span key={tag} className="px-3 py-1.5 rounded-full text-xs font-medium bg-slate-800 text-slate-400 border border-slate-700">
+              #{tag}
+            </span>
+          ))}
+        </div>
+        <div className="text-xs text-slate-500 font-mono">
+          ID: {game.id}
+        </div>
       </div>
 
       {/* Game Renderer */}
