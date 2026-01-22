@@ -23,6 +23,7 @@ export default function GamesPage() {
       case 'sound-memory-beat': return 'border-neon-blue/50 shadow-neon-blue/20';
       case 'chaos-room-challenge': return 'border-neon-green/50 shadow-neon-green/20';
       case 'color-switch-reflex': return 'border-neon-red/50 shadow-neon-red/20';
+      case 'category-sprint': return 'border-neon-yellow/50 shadow-neon-yellow/20';
       default: return 'border-slate-700 shadow-slate-900/50';
     }
   };

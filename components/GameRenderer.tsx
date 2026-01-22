@@ -9,7 +9,7 @@ import FlashVisualBomb from './games/FlashVisualBomb'
 import ChaosRoomChallenge from './games/ChaosRoomChallenge'
 import StorySplitChallenge from './games/StorySplitChallenge'
 import ColorSwitchReflex from './games/ColorSwitchReflex'
-import AIPromptRush from './games/AIPromptRush'
+import CategorySprint from './games/CategorySprint'
 
 type GameId = 
   | 'speed-swipe-match'
@@ -21,7 +21,7 @@ type GameId =
   | 'chaos-room-challenge'
   | 'story-split-challenge'
   | 'color-switch-reflex'
-  | 'ai-prompt-rush'
+  | 'category-sprint'
 
 export default function GameRenderer({ gameId }: { gameId: GameId }) {
   switch (gameId) {
@@ -43,8 +43,8 @@ export default function GameRenderer({ gameId }: { gameId: GameId }) {
       return <StorySplitChallenge />
     case 'color-switch-reflex':
       return <ColorSwitchReflex />
-    case 'ai-prompt-rush':
-      return <AIPromptRush />
+    case 'category-sprint':
+      return <CategorySprint />
     default:
       return <div style={{textAlign: 'center', color: '#9ca3af', padding: '2rem'}}>Game component not found</div>
   }

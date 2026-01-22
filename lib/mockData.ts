@@ -73,11 +73,11 @@ export const games: Game[] = [
     description: 'Fast reflex color rule game. React instantly as color rules change — keep up with the speed!'
   },
   {
-    id: 'ai-prompt-rush',
-    name: 'AI Prompt Rush',
+    id: 'category-sprint',
+    name: 'Category Sprint',
     difficulty: 'Hard',
-    tags: ['Creativity', 'Thinking', 'Challenge'],
-    description: 'Rapid creative prompt response. Generate creative ideas quickly under time pressure.'
+    tags: ['Vocabulary', 'Speed', 'Thinking'],
+    description: 'Type as many valid words as possible in the given category before time runs out.'
   }
 ]
 
