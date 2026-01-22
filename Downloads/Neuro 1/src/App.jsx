@@ -14,6 +14,7 @@ import Dashboard from './pages/Dashboard';
 
 import FocusMode from './components/common/FocusMode';
 import ErrorBoundary from './components/common/ErrorBoundary';
+import Header from './components/common/Header';
 import { GameProvider } from './context/GameContext';
 
 import Stats from './pages/Stats';
@@ -25,6 +26,7 @@ function App() {
       <GameProvider>
         <Router>
           <div className="min-h-screen bg-slate-950 text-white font-sans selection:bg-purple-500/30">
+            <Header />
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/play" element={<Play />} />
